@@ -38,7 +38,7 @@ public class JuegoOlimpicoManager {
                     break;
 
                 case 2:
-                    medalTable();
+                    joc.medalTable();
                     break;
 
                 case 3:
@@ -70,12 +70,7 @@ public class JuegoOlimpicoManager {
         joc.registerCountry(input);
         System.out.println("País registrado");
     }
-    private void medalTable(){
-        Collections.sort(joc.getPaises());
-        joc.getPaises().forEach(pais ->{
-            System.out.println("Pais: " + pais.getName() + " Medallas de Oro: " + pais.getOro() + " Medallas de Plata: " + pais.getPlata() + " Medallas de Bronce: " + pais.getBronce());
-        });
-    }
+
 
 
 }

@@ -58,10 +58,10 @@ public class Pais implements Comparable<Pais>{
 
     @Override
     public int compareTo(Pais o) {
-        int criteria1 = this.getOro() - o.getOro();
+        int criteria1 = o.getOro() - this.getOro();
         if(criteria1 == 0 ){
-            int criteria2 = this.getPlata() - o.getPlata();
-            if(criteria2 == 0 ) return this.getBronce() - o.getBronce();
+            int criteria2 = o.getPlata() - this.getPlata();
+            if(criteria2 == 0 ) return o.getBronce() - this.getBronce() ;
             else return criteria2;
         } else return criteria1;
     }

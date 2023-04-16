@@ -60,6 +60,11 @@ public class JuegoOlimpicoController {
             return;
         }
     }
-
+    public void medalTable(){
+        Collections.sort(paises);
+        paises.forEach(pais ->{
+            System.out.println("Pais: " + pais.getName() + " Medallas de Oro: " + pais.getOro() + " Medallas de Plata: " + pais.getPlata() + " Medallas de Bronce: " + pais.getBronce());
+        });
+    }
 
 }
