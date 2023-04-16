@@ -6,12 +6,22 @@ public class Pais implements Comparable<Pais>{
     private int oro;
     private int plata;
     private int bronce;
+    private int medallasTotales;
 
     public Pais(String name, int oro, int plata, int bronce) {
         this.name = name;
         this.oro = oro;
         this.plata = plata;
         this.bronce = bronce;
+        this.medallasTotales = this.getOro() + this.getPlata() + this.getBronce();
+    }
+
+    public int getMedallasTotales() {
+        return medallasTotales;
+    }
+
+    public void setMedallasTotales(int medallasTotales) {
+        this.medallasTotales = medallasTotales;
     }
 
     public String getName() {

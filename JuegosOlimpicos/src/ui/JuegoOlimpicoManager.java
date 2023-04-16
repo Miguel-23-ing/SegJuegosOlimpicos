@@ -38,11 +38,11 @@ public class JuegoOlimpicoManager {
                     break;
 
                 case 2:
-                    joc.medalTable();
+                    System.out.println(joc.medalTable());
                     break;
 
                 case 3:
-
+                    System.out.println(joc.totalMedalTable());
                     break;
 
                 case 4:
