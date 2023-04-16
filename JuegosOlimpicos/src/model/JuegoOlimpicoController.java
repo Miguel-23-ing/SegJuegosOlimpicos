@@ -1,6 +1,7 @@
 package model;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 
 public class JuegoOlimpicoController {
@@ -89,6 +90,22 @@ public class JuegoOlimpicoController {
         for (Pais pais : paises) {
             msj += "Pais: " + pais.getName() + " -" + " Medallas totales: " + pais.getMedallasTotales() + " -" + " Medallas de Oro: " + pais.getOro() + " -" +
                     " Medallas de Plata: " + pais.getPlata() + " -" + " Medallas de Bronce: " + pais.getBronce() + "\n";
+        }
+        return msj;
+    }
+    public String bubbleSort(){
+        for(int j = 0; j < paises.size()-1; j++){
+            for(int i = 1; i < paises.size(); i++){
+                if(paises.get(i-1).getName().compareTo(paises.get(i).getName()) > 0){
+                    Pais temp = paises.get(i-1);
+                    paises.set(i-1, paises.get(i));
+                    paises.set(i, temp);
+                }
+            }
+        }
+        String msj = "";
+        for (Pais pais : paises) {
+            msj += "Pais: " + pais.getName() + "\n";
         }
         return msj;
     }

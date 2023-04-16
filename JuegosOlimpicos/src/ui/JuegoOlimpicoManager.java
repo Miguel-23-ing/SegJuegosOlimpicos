@@ -46,7 +46,7 @@ public class JuegoOlimpicoManager {
                     break;
 
                 case 4:
-
+                    System.out.println(joc.bubbleSort());
                     break;
 
                 case 5:
